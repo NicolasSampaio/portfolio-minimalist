@@ -9,7 +9,11 @@ import { useDarkSide } from "../hooks/useDarkSide";
 import { Switcher } from "./Switcher";
 
 export function Header() {
-  const [colorTheme, setColorTheme] = useDarkSide();
+  const [contactLogoColor, setContactLogoColor] = useState("");
+
+  function handleChangeContactLogoColor(color: string) {
+    setContactLogoColor(color === "light" ? "#fff" : "#000");
+  }
 
   return (
     <>
@@ -17,7 +21,9 @@ export function Header() {
         <h1 className="text-3xl sm:text-5xl dark:text-white font-black">
           nicolassampaio.dev
         </h1>
-        <Switcher />
+        <Switcher
+          onHandleChangeContactLogoColor={handleChangeContactLogoColor}
+        />
       </div>
       <dl>
         <dt className="text-xs dark:text-white font-bold uppercase mb-2">
@@ -58,10 +64,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* <LinkedinLogo
-                size={28}
-                color={colorTheme === "light" ? "#fff" : "#000"}
-              /> */}
+              <LinkedinLogo size={28} color={contactLogoColor} />
             </a>
           </dd>
           <dd>
@@ -70,7 +73,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GithubLogo size={28} />
+              <GithubLogo size={28} color={contactLogoColor} />
             </a>
           </dd>
 
@@ -80,13 +83,13 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <InstagramLogo size={28} />
+              <InstagramLogo size={28} color={contactLogoColor} />
             </a>
           </dd>
 
           <dd>
             <a href="mailto: nicolas.pereira.sampaio16@gmail.com">
-              <EnvelopeSimple size={28} />
+              <EnvelopeSimple size={28} color={contactLogoColor} />
             </a>
           </dd>
         </div>

@@ -38,7 +38,7 @@ export function Collapse({
             return (
               <div
                 key={post.title}
-                className="flex flex-col sm:flex-row sm:items-center  gap-4 mt-4"
+                className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4"
               >
                 <div className="w-72 h-44 flex-shrink-0">
                   <a

@@ -11,7 +11,7 @@ export const projects: Post[] = [
     imgSrc:
       "https://github.com/NicolasSampaio/Portoflio/blob/master/web/src/assets/this.PNG?raw=true",
     title: "Old Portfolio",
-    description: "My portfolio. Made with react and tailwind.",
+    description: "My old portfolio. Made with react and tailwind.",
     githubUrl: "https://github.com/NicolasSampaio/Portoflio",
     hostedAppUrl: "https://nicolassampaio.vercel.app/portfolio",
   },
