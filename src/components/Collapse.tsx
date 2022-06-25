@@ -17,14 +17,18 @@ export function Collapse({
   const [isOpen, setIsOpen] = useState(beginOpen || false);
 
   return (
-    <div className="w-full sm:w-[90%] p-8 bg-gray-100 rounded-lg hover:shadow-lg transition">
+    <div className="w-full sm:w-[90%] p-8 bg-gray-100 dark:bg-slate-800 rounded-lg hover:shadow-lg transition">
       <button
         className="w-full cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex flex-col">
-          <h2 className="text-xl text-start font-bold">{title}</h2>
-          <p className="text-base text-start font-bold">{description}</p>
+          <h2 className="text-xl dark:text-white text-start font-bold">
+            {title}
+          </h2>
+          <p className="text-base dark:text-white text-start font-bold">
+            {description}
+          </p>
         </div>
       </button>
 
@@ -50,11 +54,13 @@ export function Collapse({
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-lg font-bold">{post.title}</h3>
-                  <p className="text-sm">{post.description}</p>
+                  <h3 className="text-lg dark:text-white font-bold">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm dark:text-white">{post.description}</p>
                   {post.githubUrl ? (
                     <a
-                      className="text-blue-600 hover:text-blue-900 transition-colors"
+                      className="text-blue-600 dark:text-red-600 hover:text-blue-900 transition-colors"
                       href={post.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
